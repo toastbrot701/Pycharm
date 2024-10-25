@@ -6,7 +6,7 @@ import pandas_datareader
 from bs4 import BeautifulSoup
 
 
-file: TextIO = open("File.csv", "r")
+file: TextIO = open("../File.csv", "r")
 
 def simple_api():
     url = 'https://dog.ceo/api/breeds/list/all'

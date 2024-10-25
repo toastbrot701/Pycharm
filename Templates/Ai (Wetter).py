@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 
 
-file: TextIO = open("File.csv", "r")
+file: TextIO = open("../File.csv", "r")
 
 
 def simpleai():
@@ -73,7 +73,7 @@ def wettererkennung():
 
 
     #file
-    file = open("File.csv", "r")
+    file = open("../File.csv", "r")
 
     # print("Temperatur:", wetter.temperature('celsius'))
     number = 0
@@ -94,7 +94,7 @@ def wettererkennung():
             wetter_daten = place_3.weather
             temperatur = wetter_daten.temperature('celsius')
             Temperatur_Daten = [temperatur]
-            with open("File.csv", "a") as file:
+            with open("../File.csv", "a") as file:
                 writer = csv.writer(file)
                 writer.writerow([Stadt] + Temperatur_Daten)
                 data = Stadt,Temperatur_Daten
@@ -134,7 +134,7 @@ def wetterai():#funtkioniert noch nicht Prototyp
 
         #Daten aus Csv datei aufrufen:
 
-        df = pd.read_csv('File.csv')
+        df = pd.read_csv('../File.csv')
         # erstmal rufe ic nur spezifische daten für eine stadt auf später kann der user sich welche aussuchen
         df.loc[1, 'Temperatur (°C)']#München Daten
 
